@@ -1,0 +1,1441 @@
+@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling:touch;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -90px;
+    visibility: hidden;
+}
+
+/* ---- Fonts / Šriftai ---- */
+
+a {
+    text-decoration: none;
+}
+h1 {
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0;
+}
+h2 {
+    /*Architekturiniu naujienu antrasciu sriftas h2*/
+    font-family: 'Roboto';
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: initial;
+}
+p {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: initial;
+}
+span {
+    font-weight: 500;
+    color: #FF5252;
+    cursor: pointer;
+}
+h3 {
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+}
+h4 {
+    /*Architekturiniu naujienu datu sriftas h4*/
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.main-nav li a {
+    text-decoration: none;
+    font-family: 'Roboto';
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 1.1em;
+    position: relative;
+    padding: 10px 10px;
+}
+.registration h3 {
+    font-family: 'Roboto';
+    color: rgb(21, 21, 107);
+    text-align: center;
+    text-transform: initial;
+}
+.registration label {
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.registration input {
+    font-family: 'Roboto';
+    color: gray;
+    font-size: 1rem;
+}
+.registration .btn {
+    font-family: 'Roboto';
+    color: #FF5252;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.aboutus-clearfix h2 {
+    text-align: left;
+}
+.aboutus-clearfix p {
+    text-align: justify;
+}
+.profile h3 {
+    text-align: right;
+    padding-right: 20px;
+    font-weight: 400;
+}
+.service-item h1 {
+    color: #FF5252;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.service-item li {
+    list-style-type: none;
+    text-align: left;
+    text-transform: initial;
+    font-family: 'Roboto';
+    line-height: 1.8;
+    color: black;
+}
+.contactus-btn {
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.contact-ul {
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.contact-form {
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    line-height: 2;
+}
+footer {
+    color: white;
+    font-family: 'Roboto';
+}
+
+/* ---- Navigation ---- */
+
+header {
+    display: flex;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0 0 10px 0 gray;
+    align-items: center;
+}
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+.logo {
+    flex-grow: 1;
+}
+.logo img {
+    height: 60px;
+}
+.hamburger img {
+    height: 40px;
+    cursor: pointer;
+}
+.main-nav li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.main-nav li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+
+
+/* ---- Slides with registration form and buttons ---- */
+
+.slides-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/16x9slide1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1.5s;
+}
+.registration {
+    /* margin-top: calc(94px + 10%); */
+    margin-top: 10%;
+    max-width: 310px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.registration input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(209, 208, 208);
+    margin: 0 0 16px 0;
+}
+.registration .btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #FF5252;
+    padding: 12px 15px;
+    border-radius: 50px;
+    width: 65%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    margin-top: 22px;
+    margin-bottom: 25px;
+}
+.registration .btn:hover {
+    background-color: #FF5252;
+    color: white;
+}
+.button-left, .button-right {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+/* ---- About us / APIE MUS---- */
+
+.aboutus-container {
+    width: 100%;
+    padding-top: 20px;
+}
+.aboutus-heading {
+    display: flex;
+    align-items: baseline;
+}
+.aboutus-heading img {
+    height: 9vh;
+}
+.aboutus-heading h1 {
+    white-space: nowrap;
+}
+.line1 {
+    border: 0.4pt solid black;
+    width: 100%;
+    height: 0px;
+}
+.main-aboutus {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+}
+.aboutus-clearfix img {
+    width: 200px;
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 12px;
+}
+.aboutus-clearfix {
+    overflow: auto;
+}
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+.profile img {
+    width: auto;
+    height: 90px;
+    border-radius: 50%;
+}
+
+/* ---- Services / PASLAUGOS ---- */
+
+.services-container {
+    padding-top: 20px;
+}
+.services-heading {
+    display: flex;
+    align-items: baseline;
+}
+.services-heading img {
+    height: 9vh;
+}
+.services-heading h1 {
+    white-space: nowrap;
+}
+.line2 {
+    border: 0.4pt solid black;
+    width: 100%;
+    height: 0px;
+}
+.main-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0 0 0;
+}
+.service-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 230px;
+    height: 315px;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    padding-top: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+.service-item:hover .red {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+}
+.service-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(17, 16, 16, 0.4), 0 6px 20px 0 rgba(20, 19, 19, 0.4);
+}
+.service-item ul li img {
+    width: 20px;
+    height: auto;
+    margin-right: 15px;
+    vertical-align: sub;
+}
+.service-item .round {
+    height: 80px;
+    margin-bottom: 5%;
+    position: relative;
+}
+.red {
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 82, 82, 0.1);
+    border-radius: 50%;
+    display: none;
+    position: absolute;
+    top: 14%;
+    right: 33%;
+    
+}
+
+/* ---- Marketing / Susikurkite savo svajoniu busta ---- */
+
+.marketing-container {
+    background-image: url(img/marketing.jpg);
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 4% 0px 20% 10px;
+    display: flex;
+    flex-direction: column;
+}
+.marketing-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #FF5252;
+    padding: 10px 50px;
+    border-radius: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    color: #FF5252;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.marketing-btn:hover {
+    background-color: #FF5252;
+    color: white;
+}
+.marketing-container h1 {
+    color: rgb(253, 250, 200);
+    font-family: 'Roboto';
+    font-weight: 500;
+    text-transform: initial;
+    font-size: 6vw; 
+    text-align: right;
+    text-shadow: 3px 2px 2px #041119;
+}
+.marketing-container p {
+    color: white;
+    font-family: 'Roboto';
+    text-align: right;
+    font-weight: 400;
+    text-shadow: 3px 2px 2px #041119;
+    font-size: 3vw;
+    flex-grow: 1;
+}
+
+/* ---- Objects / Objektai / Portfolio ---- */
+
+.object-container {
+    padding-top: 20px;
+}
+.object-heading {
+    display: flex;
+    align-items: baseline;
+}
+.object-heading img {
+    height: 9vh;
+}
+.line3 {
+    border: 0.4pt solid black;;
+    width: 100%;
+    height: 0px;
+}
+.main-object {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+}
+.object-item {
+    min-width: 300px;
+	max-width: 480px;
+	height: 300px;
+	width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 15px;
+    position: relative;
+	overflow: hidden;
+}
+.object1 {
+    background-image: url(img/download\ \(3\).jpg);
+    background-position: center;
+    background-size: cover;
+}
+.object2 {
+    background-image: url(img/namu_projektai-04-1-768x432.jpg);
+    background-position: left;
+    background-size: cover;
+}
+.object3 {
+    background-image: url(img/DSC_0547-650x366.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.object4 {
+    text-align: center;
+}
+.object4 h3 {
+    text-align: center;
+    font-size: 1rem;
+}
+.object4 span {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.object4 button {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #FF5252;
+    text-transform: uppercase;
+    border: 2px solid #FF5252;
+    border-radius: 50px;
+    padding: 4% 9%;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+}
+.object4 button:hover {
+    background-color: #FF5252;
+    color: white;
+}
+.object5 {
+    background-image: url(img/C3V-980x551.jpg);
+    background-position: left;
+    background-size: cover;
+}
+.object6 {
+    background-image: url(img/download\ \(5\).jpg);
+    background-position: center;
+    background-size: cover;
+}
+.object7 {
+    background-image: url(img/namu_projektai-08.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.object8 {
+    background-image: url(img/C8-980x551.jpg);
+    background-position: left;
+    background-size: cover;
+}
+.object9 {
+    background-image: url(img/download\ \(4\).jpg);
+    background-position: center;
+    background-size: cover;
+    order: -1;
+}
+
+/* ---- Architectural NEWS / Architektūrinės naujienos ---- */
+
+.architectural-container {
+    padding-top: 20px;
+}
+.architectural-heading {
+    display: flex;
+    align-items: baseline;
+}
+.architectural-heading img {
+    height: 12vh;
+}
+.architectural-heading h1 {
+    text-align: center;
+}
+.line4 {
+    border: 0.5pt solid black;
+    width: 100%;
+    height: 0px;
+}
+.main-architectural {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+.arch-item-1 {
+    background-image: url(img/arch-1.jpg);
+    background-size: 430px;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 350px;
+    height: 420px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    padding: 16px;
+    padding-top: 200px;
+    border-radius: 10px;
+}
+.arch-item-2 {
+    background-image: url(img/arch-2.jpg);
+    background-size: 375px;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 350px;
+    height: 420px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    padding: 16px;
+    padding-top: 200px;
+    border-radius: 10px;
+}
+.arch-item-3 {
+    background-image: url(img/arch-3.png);
+    background-size: 375px;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 350px;
+    height: 420px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    padding: 16px;
+    padding-top: 200px;
+    border-radius: 10px;
+}
+.arch-item-4 {
+    width: 350px;
+    /* height: 150px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    padding: 7px 121px 4px 18px;
+    border-radius: 10px;
+}
+.arch-item-5 {
+    background-image: url(img/arch-5.jpg);
+    background-size: 375px;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 350px;
+    height: 420px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    padding: 16px;
+    padding-top: 200px;
+    border-radius: 10px;
+}
+
+/* ---- Contact us ---- */
+
+.contactus-container {
+    width: 100%;
+    padding-top: 20px;
+}
+.contactus-heading img {
+    height: 9vh;
+}
+.contactus-heading {
+    display: flex;
+    align-items: baseline;
+}
+.line5 {
+    border: 0.4pt solid black;
+    width: 100%;
+    height: 0px;
+}
+.main-contactus {
+    padding: 50px 0 0 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.contact-form {
+    max-width: 400px;
+    padding: 16px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(209, 208, 208);
+    margin: 6px 0 16px 0;
+}
+.contact-form .contactus-btn {
+    background-color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 2px solid #FF5252;
+    width: 50%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    margin-top: 25px;
+    color: #FF5252;
+}
+.contact-form .contactus-btn:hover {
+    background-color: #FF5252;
+    color: white;
+}
+.address {
+    margin-bottom: 30px;
+}
+.address .contact-ul img {
+    height: 25px;
+    padding-right: 20px;
+}
+.address .contact-ul {
+    list-style: none;
+    padding: 0;
+    width: 65%;
+    margin: 0 auto;
+}
+.address .icons-ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.address .icons-ul li {
+    margin: 15px;
+}
+.address .icons-ul img {
+    height: 40px;
+}
+.icons-ul img:hover {
+    cursor: pointer;
+    height: 42px;
+}
+
+/* ---- Location map ---- */
+
+.location-container {
+    width: 100%;
+    padding-top: 20px;
+}
+.location-heading img {
+    height: 12vh;
+}
+.location-heading h1 {
+    white-space: nowrap;
+}
+.location-heading {
+    display: flex;
+    align-items: baseline;
+}
+.line6 {
+    border: 0.5pt solid black;
+    width: 100%;
+    height: 0px;
+}
+/* ---- Footer ---- */
+
+footer {
+    background-color: black;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+footer li {
+    display: inline;
+    margin: 20px;
+}
+footer .icon {
+    width: 40px;
+    height: auto;
+}
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-footer li a img:hover {
+    width: auto;
+    height: 45px;
+}
+
+/* ================================================
+Media Queries
+=================================================*/
+
+@media only screen and (min-width: 360px) {
+
+    h1{
+        font-size: 1.5em;
+    }
+    .marketing-container {
+        padding: 4% 10px 25% 10px;
+    }
+    .marketing-container h1 {
+        text-align: center;
+    }
+    .marketing-container p {
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.5;
+    }
+    .object4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .object4 h3 {
+        padding-bottom: 30px;
+        margin: 0;
+    }
+    .address .contact-ul {
+        list-style: none;
+        padding: 0;
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 25.6875em) {
+    /*apie 411px plotis ir daugiau*/
+    h1{
+        font-size: 1.9em;
+    }
+    
+    
+}
+@media only screen and (min-width: 38em) {
+    /*apie 611px plotis ir daugiau*/
+
+    .architectural-heading h1 {
+        white-space: nowrap;
+    }
+    .aboutus-clearfix img {
+        width: 260px;
+    }
+    .marketing-container {
+        height: 78vh;
+        padding: 9% 10px 25% 10px;
+    }
+    .marketing-container h1 {
+        text-align: right;
+        padding-right: 20px;
+    }
+    .marketing-container p {
+        text-align: right;
+        padding-right: 20px;
+        font-size: 1.5em;
+    }
+    .address .contact-ul {
+        width: 58%;
+    } 
+    
+}
+@media only screen and (max-width: 40.625em) {
+    /*iki kol plotis daugiausiai iki 650px nerodo vieno portfolio objekto*/
+    .object8 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 40.75em) {
+    /*apie 652px plotis ir daugiau*/
+
+    .object-item {
+        max-width: 300px;;
+    }
+    .aboutus-clearfix img {
+        width: 340px;
+    }
+    
+}
+@media only screen and (max-width: 56.25em) {
+    /*iki 900px nerodo pagrindinio meniu*/
+
+    .phoneDiv {
+        display: none;
+    }
+    .main-nav {
+        display: none;
+    }
+    /* ---- Mobile Sidenav ---- */
+    .sidenav {
+        height: 100vh; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        right: 0; /* Is desines pajudes */
+        background-color: white; /* White*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        padding-left: 0; /* kad nei6sikistu is sono */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        margin: 0; /*kad nuo virsaus nebutu whitspace */
+    }
+    .header-container footer {
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+    }
+    .header-container footer a {
+        padding: 0;
+    }
+    .sidenav li {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    /* The navigation menu links */
+    .sidenav a {
+        font-family: 'Roboto';
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 2rem;
+        color: black;
+        display: block;
+        transition: 0.3s;
+        line-height: 1.7;
+    }
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #FF5252;
+    }
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        /* margin-left: 50px; */
+    }
+    .aboutus-container {
+        margin-bottom: 12%;
+    }
+    .services-container {
+        margin-bottom: 12%;
+    }
+    .object-container {
+        margin-bottom: 12%;
+    }
+    .content {
+        display: none;
+    }
+    .architectural-container {
+        margin-bottom: 12%;
+    }
+}
+
+@media only screen and (min-width: 56.25em) {
+    /*nuo 900px dingsta hamburgerio meniu ir atsiranda pagrindinis headerio meniu*/
+
+    .hamburger {
+        display: none;
+    }
+    .closebtn {
+        display: none;
+    }
+    .sidenav {
+        display: none;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .main-menu {
+        display: flex;
+        flex-grow: 2;
+    }
+    .main-menu h3 {
+        flex-grow: 1;
+    }
+    .main-menu .phone{
+        width: 17px;
+        margin-right: 7px;
+    }
+    .main-nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        flex-grow: 2;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    /*Slides*/
+    .button-left, .button-right {
+        border-radius: 100%;
+        border: none;
+        height: 60px;
+        width: 60px;
+        background-color: rgba(255, 255, 255, 0.55);
+        cursor: pointer;
+        margin-left: 1%;
+        margin-right: 1%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    }
+    .slides-container {
+        position: relative;
+    }
+    .registration {
+        position: absolute;
+        right: 10%;
+        margin-top: 0;
+    }
+    .services-container {
+        margin-bottom: 6%;
+    }
+    .architectural-container {
+        margin-bottom: 10%;
+    }
+    .main-contactus {
+        flex-direction: row;
+        justify-content:space-evenly;
+    }
+    .contact-form {
+        width: 400px;
+        padding: 16px;
+        margin: 0;
+    }
+    .address .contact-ul {
+        width: 100%;
+    }
+    .address {
+        margin-top: 3%;
+    }
+    
+}
+@media only screen and (min-width: 60em) {
+    /*apie 960px plotis ir daugiau*/
+
+    .object-container {
+        margin-bottom: 6%;
+    }
+    .object4 h3 {
+        font-size: 1.3em;
+    }
+    .object4 button {
+        font-size: 1.2em;
+    }
+    .aboutus-clearfix img {
+        width: 360px;
+    }
+    .services-container {
+        margin-bottom: 6%;
+    }
+    .marketing-container h1 {
+        font-size: 4vw;
+    }
+    .marketing-container p {
+        font-size: 2vw;
+    }
+    .marketing-container {
+        height: 60vh;
+        padding: 6% 10px 25% 10px;
+    }
+    .marketing-btn {
+        padding: 15px 55px;
+    }
+    /* hover effect on object elements */
+    .object-item img {
+        position: relative;
+        display: block;
+        min-height: 100%;
+        max-width: 100%;
+        opacity: 0.8;
+        object-fit: cover;
+    }
+    .object-item .content {
+        padding: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .object-item .content::before,
+    .object-item .content::after {pointer-events: none;}
+    
+    .object-item .content,
+    .object-item .content > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /* Anchor will cover the whole item by default */
+    /* For some effects it will show as a button */
+    .object-item .content > a {
+        z-index: 500;
+        text-indent: 200%;
+        white-space: nowrap;
+        font-size: 0;
+        opacity: 0;
+    }
+    
+    .object-item h2 {
+        word-spacing: -0.15em;
+        font-size: 24px;
+        font-weight: 200;
+    }
+    .object-item h2 span {color: #fdfcfc;font-weight: 800;}
+    .object-item h2, .object-item p {margin: 0;}
+    .object-item p {
+        letter-spacing: 1px;
+        font-size: 68.5%;
+    }
+    /*-----------------*/
+    /***** Shine *****/
+    /*-----------------*/
+    
+    
+    .object-item img {
+        opacity: 0.95;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale3d(1.05,1.05,1);
+        transform: scale3d(1.05,1.05,1);
+    }
+    
+    .object-item .content::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.5);
+        content: '';
+        -webkit-transition: -webkit-transform 0.6s;
+        transition: transform 0.6s;
+        -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+        transform: scale3d(2.3,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    }
+    
+    .object-item p {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 3em;
+        padding: 0 1em;
+        max-width: 150px;
+        border-right: 4px solid #fff;
+        text-align: right;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+    
+    .object-item h2 {
+        text-align: left;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 0 0 5em 0;
+        padding: 0 2.2em;
+        text-align: right;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+    
+    .object-item:hover .content{
+        background: rgba(255, 82, 82, 0.596);
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+    
+    .object-item:hover .content::before {
+        -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+        transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    }
+    
+    .object-item:hover p {
+        opacity: 1;
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+    }
+    
+    .object-item:hover h2 {
+        opacity: 1;
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+    }
+    .arch-item-1 span:hover,
+    .arch-item-2 span:hover,
+    .arch-item-3 span:hover,
+    .arch-item-5 span:hover {
+        font-weight: 900;
+    }
+    
+}
+@media only screen and (min-width: 64em) {
+    /*apie 1024px plotis ir daugiau*/
+
+    h1 {
+        font-size: 3em;
+    }
+    .main-contactus {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .address .contact-ul {
+        width: 100%;
+    }   
+    
+}
+
+@media only screen and (min-width: 72.5em) {
+    /*apie 1160px plotis ir daugiau*/
+
+    .main-architectural {
+        width: 1160px;
+        margin: 0 auto;
+        margin-top: 5%;
+    }       
+}
+
+@media only screen and (min-width: 75em) {
+    /*apie 1200px plotis ir daugiau*/
+
+    .services-container {
+        height: 100vh;
+        margin: 0;
+    }
+    .main-services {
+        padding-top: 9%;
+    }
+    .service-item {
+        width: 210px;
+        height: 315px;
+        margin: 15px;
+    }
+    .service-item ul {
+        padding: 0 0 0 10px;
+    }
+    .object-item {
+        max-width: 340px;
+        height: 340px;
+    }
+}
+@media only screen and (min-width: 82.9375em) {
+    /*apie 1327px plotis ir daugiau*/
+
+    .aboutus-heading .heading-img {
+        height: 12vh;
+    }
+    .main-aboutus {
+        padding: 50px 0 0 0;
+    }
+    .aboutus-clearfix img {
+        width: 425px;
+        margin-right: 30px;
+    }
+    .aboutus-clearfix p {
+        font-size: 1.1em;
+    }
+    .services-heading .heading-img {
+        height: 12vh;
+    }
+    .object-heading .heading-img {
+        height: 12vh;
+    }
+    .architectural-heading .heading-img {
+        height: 12vh;
+    }
+    .contactus-heading .heading-img {
+        height: 12vh;
+    }
+    .location-heading .heading-img {
+        height: 12vh;
+    }
+    .object-item {
+        max-width: 400px;
+        height: 300px;
+    }
+    .profile {
+        margin-top: 40px;
+    }
+    .main-services {
+        padding-top: 5%;
+    }
+    .service-item {
+        width: 229px;
+        height: 350px;
+        padding-top: 50px;
+    }
+    .marketing-container {
+        height: 100vh;
+        padding: 4% 10px 12% 10px;
+    }
+    
+}
+
+@media only screen and (min-width: 98.75em) {
+    /*apie 1580px plotis ir daugiau*/
+
+    .main-architectural {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 106em) {
+    /*apie 1700px plotis ir daugiau*/
+
+    .aboutus-clearfix img {
+        width: 550px;
+    }
+    .aboutus-clearfix h2 {
+        font-size: 1.9em;
+    }
+    .aboutus-clearfix p {
+        font-size: 1.3em;
+    }
+    .services-container {
+        height: 100vh;
+    }
+    .service-item {
+        width: 260px;
+        height: 370px;
+        padding-top: 50px;
+    }
+    .main-object {
+        margin-top: 2%;
+        max-width: 1600px;
+    }
+    .main-contactus {
+        width: 70%;
+        padding: 4% 0 0 0;
+    }
+    
+}
+@media only screen and (min-width: 125em) {
+    /*apie 2000px plotis ir daugiau*/
+
+    h1 {
+        font-size: 3.5em;
+    }
+    .header-container {
+        width: 70%;
+    }
+    .logo {
+        flex-grow: 3;
+    }
+    /*Slides*/
+    .registration {
+        max-width: 460px;
+        padding: 25px;
+    }
+    form h3 {
+        margin: 0 auto;
+        margin-bottom: 33px;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .registration input {
+        margin: 6px 0 16px 0;
+    }
+    .registration .btn {
+        margin-top: 24px;
+        width: 50%;
+    }
+    /*ABOUTUS*/
+    .aboutus-container {
+        margin-bottom: 4%;
+    }
+    .aboutus-heading img {
+        height: 150px;
+    }
+    .main-aboutus {
+        width: 80%;
+    }
+    .aboutus-clearfix img {
+        width: 650px;
+    }
+    .aboutus-clearfix h2 {
+        font-size: 2.25em;
+    }
+    .aboutus-clearfix p {
+        font-size: 1.5em;
+    }
+    .profile h3 {
+        font-size: 1.7em;
+    }
+    .profile h4 {
+        font-size: 1.4em;
+    }
+    .profile img {
+        width: auto;
+        height: 139px;
+    }
+    /*SERVICES*/
+    .services-heading img {
+        height: 8vh;
+    }
+    .main-services {
+        margin-top: 4%;
+    }
+    .service-item {
+        width: 275px;
+        height: 390px;
+        margin: 30px;
+    }
+    .service-item ul {
+        padding: 0 0 0 35px;
+    }
+    /*MARKETING*/
+    .marketing-container {
+        height: 90vh;
+        padding: 6% 10px 12% 10px;
+    }
+    .marketing-container h1 {
+        text-align: right;
+        font-size: 4rem;
+        padding-right: 100px;
+    }
+    .marketing-container p {
+        text-align: right;
+        font-size: 2rem;
+        padding-right: 100px;
+    }
+    .marketing-btn {
+        padding: 20px 90px;
+        font-size: 2.2em;
+    }
+    /*OBJECT*/
+    .object-container {
+        margin-bottom: 5%;
+    }
+    .object-heading img {
+        height: 150px;
+    }
+    .object-item {
+        max-width: 500px;
+        height: 340px;
+    }
+    .object4 button {
+        padding: 3% 9%;
+        font-size: 1.5rem;
+    }
+    .object4 h3 {
+        font-size: 2.3rem;
+    }
+    /*ARCHITECTURAL*/
+    .architectural-container {
+        margin-bottom: 8%;
+    }
+    .architectural-heading img {
+        height: 150px;
+    }
+    .main-architectural {
+        margin-top: 5%;
+    }
+    /*CONTACT US*/
+    .contactus-container {
+        height: 80vh;
+    }
+    .contactus-heading img {
+        height: 150px;
+    }
+    .contact-form {
+        max-width: 510px;
+    }
+    /*LOCATION*/
+    .location-heading img {
+        height: 150px;
+    }
+
+    
+}
+

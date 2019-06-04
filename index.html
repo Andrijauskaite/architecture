@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Urbopro</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+                <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+                <div class="main-menu">
+                    <div class="phoneDiv"><h3><img class="phone" src="img/icons/telephone.png" >8-615-80309</h3></div>
+                    <ul id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <li><a href="#apie" onclick="closeNav()">about</a></li>
+                        <li><a href="#paslaugos" onclick="closeNav()">services</a></li>
+                        <li><a href="#objektai" onclick="closeNav()">object</a></li>
+                        <li><a href="#kontaktai" onclick="closeNav()">contact</a></li>
+                        <footer>
+                                <div class="main-footer sidefooter">
+                                    <ul>
+                                        <li><a href=""><img class="icon" src="img/icons/facebook-logo.png" alt="facebook"></a></li>
+                                        <li><a href=""><img class="icon" src="img/icons/linkedin-logo.png" alt="linkedin"></a></li>
+                                        <li><a href=""><img class="icon" src="img/icons/instagram.png" alt="instagram"></a></li>
+                                    </ul>
+                                <p>©  2019 URBOPRO. All Rights Reserved.</p>
+                            </div>
+                            </footer> <!--ending Footer-->
+                    </ul>
+                    <ul class="main-nav">
+                        <li><a href="#apie">about</a></li>
+                        <li><a href="#paslaugos">services</a></li>
+                        <li><a href="#objektai">object</a></li>
+                        <li><a href="#kontaktai">contact</a></li>
+                    </ul>           
+                </div>
+                <div class="hamburger"><img src="img/icons/menu.png" alt="" onclick="openNav()"></div>
+                
+        </div>         
+    </header><!--ending header-->
+
+    <main>
+        <div class="slides-container" image-number='1'>
+            
+            <button class="button-left" onclick="changeSlideButtonCLicked('left')"><img src="img/icons/white-left.png" alt=""></button>
+
+            <div action="" class="registration">
+                <h3 id="registrationFormTitle">Registration for the house project</h3>
+
+                <label for="name">Your Name, Last Name</label>
+                <input type="text" id="name" name="name" placeholder="Alberto Alvaro">
+                <label for="email">Your email</label>
+                <input type="text" id="email" name="email" placeholder="pastas@gmail.com">
+                <label for="phone">Your phone number</label>
+                <input type="text" id="phone" name="phone" placeholder="+370 611 1111">
+                <a href="mailto:e.andrijauskaite@gmail.com"><button class="btn">Registration</button></a>
+            </div>
+
+            <button class="button-right" onclick="changeSlideButtonCLicked('right')"><img src="img/icons/white-right.png" alt=""></button>
+
+        </div> <!--ending Slides-->
+
+        <div class="aboutus-container">
+            <a class="anchor" id="apie"></a> 
+            <div class="aboutus-heading">
+                <img src="img/aboutus-heading.png" alt="" class="heading-img">
+                <h1>About us</h1>
+                <div class="line1"></div>
+            </div>
+            <div class="main-aboutus">
+                <div class="aboutus-clearfix">
+                <img src="img/sunny-day.jpg" alt="" >
+                <h2>Lorem Ipsum</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+                <div class="profile">
+                    <h3>Franc Karl, URBOpro<br>Director</h3>
+                    <img src="img/smile-1726471_1920.jpg" alt="">
+                </div>
+            </div>
+        </div> <!--ending About us-->
+
+        <div class="services-container">
+            <a class="anchor" id="paslaugos"></a>
+            <div class="services-heading">
+                <img src="img/services-heading.jpg" alt="" class="heading-img">
+                <h1>Our services</h1>
+                <div class="line2"></div>
+            </div>
+            <div class="main-services">
+                <a href="loremipsum-1.html"><div class="service-item">
+                    <img class="round" src="img/icons/icon1.png" alt="">
+                    <div class="red"></div>
+                    <h1>Lorem ipsum 1</h1>
+                    <ul>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                    </ul>
+                </div></a>
+
+                <a href="loremipsum-2.html"><div class="service-item">
+                    <img class="round" src="img/icons/icon2.png" alt="">
+                    <div class="red"></div>
+                    <h1>Lorem ipsum 2</h1>
+                    <ul>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                    </ul>                    
+                </div></a>
+
+                <a href="loremipsum-3.html"><div class="service-item">
+                    <img class="round" src="img/icons/icon3.png" alt="">
+                    <div class="red"></div>
+                    <h1>Lorem ipsum 3</h1>
+                    <ul>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                    </ul>
+                </div></a>
+
+                <a href="loremipsum-4.html"><div class="service-item">
+                    <img class="round" src="img/icons/icon4.png" alt="">
+                    <div class="red"></div>
+                    <h1>Lorem ipsum 4</h1>
+                    <ul>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                    </ul>  
+                </div></a>
+
+                <a href="loremipsum-5.html"><div class="service-item">
+                    <img class="round" src="img/icons/icon5.png" alt="">
+                    <div class="red"></div>
+                    <h1>Lorem ipsum 5</h1>
+                    <ul>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                        <li><img class="service-arrow" src="img/icons/right-arrow (1).png">Dolor ipsum</li>
+                    </ul> 
+                </div></a>
+
+            </div>
+        </div> <!--ending Services/Paslaugos-->
+
+        <div class="marketing-container">
+            <h1>Create your own dream home!</h1>
+            <p>Consider how you imagine your dream home. Contact us today and let's get started.</p>
+            <a href="#kontaktai"><button class="marketing-btn">Contact</button></a>
+        </div> <!--ending Marketing susikurk savo svajoniu busta-->
+
+        <div class="object-container">
+            <a class="anchor" id="objektai"></a>
+            <div class="object-heading">
+                <img src="img/object-heading.jpg" alt="" class="heading-img">
+                <h1>Object</h1>
+                <div class="line3"></div>
+            </div>
+            <div class="main-object">
+                <div class="object-item object1">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                         <a href="#">View More</a>
+                       </div>
+                </div>
+                <div class="object-item object2">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                        <a href="#">View More</a>
+                    </div>    
+                </div>
+                <div class="object-item object3">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+                <div class="object-item object4">
+                    <h3><span class="qoutes">&#8220;</span><br>Consider Your project</h3>
+                    <a href="#kontaktai"><button class="object-btn">Contact</button></a>
+                </div>
+                <div class="object-item object5">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+                <div class="object-item object6">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+                <div class="object-item object7">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+                <div class="object-item object8">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+                <div class="object-item object9">
+                    <div class="content">        
+                        <div>
+                            <h2>Beautiful <span>ARCHITECTURE</span></h2>
+                            <p>Lorem Ipsum Dolor</p>
+                        </div>
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!--ending Objektai, portfolio-->
+
+        <div class="architectural-container">
+            <div class="architectural-heading">
+                <img src="img/architectural-heading.jpg" alt="" class="heading-img">
+                <h1>Architectural news</h1>
+                <div class="line4"></div>
+            </div>
+            <div class="main-architectural">
+                <div class="arch-item-1">
+                    <h4>December 3, 2018</h4>
+                    <h2>Architectural Innovations</h2>
+                    <p>Lots of companies tend to be “architecturally innovative” but what does it really mean?<br><span class="read-more">Read more...</span></p>
+                </div>
+                <div class="arch-item-2">
+                    <h4>December 17, 2018</h4>
+                    <h2>Fixture Favorites From Our Winter Selection</h2>
+                    <p>Looking for a little lighting design inspiration? Browse these unique modern light fixtures.<br><span class="read-more">Read more...</span></p>
+                </div>
+                <div class="arch-item-3">
+                    <h4>December 3, 2018</h4>
+                    <h2>The Easter Eggs of Architecture</h2>
+                    <p>We cover an example of a pleasant design surprise in one of our projects.<br><span class="read-more">Read more...</span></p>
+                </div>
+                <!-- <div class="arch-item-4">
+                    <h4>December 10, 2018</h4>
+                    <h2>Get inspired by URBOPRO</h2>  
+                </div> -->
+                <div class="arch-item-5">
+                    <h4>December 3, 2018</h4>
+                    <h2>The Easter Eggs of Architecture</h2>
+                    <p>We cover an example of a pleasant design surprise in one of our projects.<br><span class="read-more">Read more...</span></p>
+                </div>
+            </div>
+        </div> <!--ending Architekturines naujienos-->
+
+        <div class="contactus-container">
+            <a class="anchor" id="kontaktai"></a>
+            <div class="contactus-heading">
+                <img src="img/contactus-heading.jpg" alt="" class="heading-img">
+                <h1>Contact</h1>
+                <div class="line5"></div>
+            </div>
+            <div class="main-contactus">
+                <form action="" class="contact-form">
+                    <label for="name">Your Name, Last Name</label>
+                    <input type="text" id="name" name="name" placeholder="Alberto Alvaro">
+                    <label for="email">Your email</label>
+                    <input type="text" id="email" name="email" placeholder="pastas@gmail.com">
+                    <label for="phone">Your telephone number</label>
+                    <input type="text" id="phone" name="phone" placeholder="+370 611 1111">
+                    <a href="mailto:e.andrijauskaite@gmail.com"><button class="contactus-btn">Contact</button></a>
+                </form>
+                <div class="address">
+                    <ul class="contact-ul">
+                        <li><a><img class="" src="img/icons/location-icon.png"></a>J. Janonio g. 6B Klaipeda, Lithuania</li>
+                        <li><a><img class="" src="img/icons/telephone-small-icon.png"></a>8-611-80000</li>
+                        <li><a><img class="" src="img/icons/opened-email-envelope.png"></a>info@lorem.com</li>
+                    </ul>
+                    <ul class="icons-ul">
+                        <li><a href=""><img class="icon" src="img/icons/color-facebook.png" alt="facebook"></a></li>
+                        <li><a href=""><img class="icon" src="img/icons/color-linkedin.png" alt="linkedin"></a></li>
+                        <li><a href=""><img class="icon" src="img/icons/color-instagram.png" alt="instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!--ending Contact us-->
+
+        <div class="location-container">
+            <div class="location-heading">
+                <img src="img/location-heading.jpg" alt="" class="heading-img">
+                <h1>Our location</h1>
+                <div class="line6"></div>
+            </div>
+            <div class="map">
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=J.%20Janonio%20g.%206B%2C%20Klaip%C4%97da&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            </div>
+        </div> <!--ending Location map-->
+
+    </main>
+          
+    <script src="script.js"></script>
+    <script src="zenscroll-min.js"></script>
+
+    <footer>
+        <div class="main-footer">
+            <ul>
+                <li><a href=""><img class="icon" src="img/icons/facebook-logo.png" alt="facebook"></a></li>
+                <li><a href=""><img class="icon" src="img/icons/linkedin-logo.png" alt="linkedin"></a></li>
+                <li><a href=""><img class="icon" src="img/icons/instagram.png" alt="instagram"></a></li>
+            </ul>
+        <p>©  2019 URBOPRO. All Rights Reserved.</p>
+    </div>
+    </footer> <!--ending Footer-->
+</body>
+</html>

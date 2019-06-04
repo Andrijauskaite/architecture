@@ -1,0 +1,140 @@
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+.container h2 {
+    color: #FF5252;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 60px;
+
+}
+.right-arrow {
+    font-size: 1.5em;
+}
+.column {
+    margin-bottom: 60px;
+}
+.column h3 {
+    text-align: center;
+}
+.column p {
+    text-align: justify;
+    line-height: 1.7;
+}
+.column img {
+    width: 100%;
+}
+
+
+/***********************************************
+                    MEDIJOS
+***********************************************/
+
+@media only screen and (min-width: 37em) {
+    /*apie 592px plotis ir daugiau*/
+
+    .container {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 60em) {
+    /*apie 960px plotis ir daugiau*/
+
+    h2 {
+        font-size: 2vw;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        width: 100%;
+    }
+    aside {
+        width: 25%;
+        flex-grow: 1;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 100px 1% 0 1%;
+        text-align: center;
+    }
+    .sidebar1 {
+        background-image: linear-gradient(
+        to bottom,
+         rgba(254, 255, 254, 0.6), 
+         rgba(205, 220, 57, 0.66)),
+        url(img/sidebar.jpg);
+        width: 150px;
+    }
+    .sidebar2 {
+        background-image: linear-gradient(
+        to bottom,
+         rgba(254, 255, 254, 0.6), 
+         rgba(205, 220, 57, 0.66)),
+        url(img/sidebar.jpg);
+        width: 150px;
+    }
+    .sidebar3 {
+        background-image: linear-gradient(
+        to bottom,
+         rgba(254, 255, 254, 0.6), 
+         rgba(205, 220, 57, 0.66)),
+        url(img/sidebar.jpg);
+        width: 280px;
+    }
+    .sidebar4 {
+        background-image: linear-gradient(
+        to bottom,
+         rgba(254, 255, 254, 0.6), 
+         rgba(205, 220, 57, 0.667)),
+        url(img/sidebar.jpg);
+        width: 150px;
+    }
+    .sidebar5 {
+        background-image: linear-gradient(
+        to bottom,
+         rgba(254, 255, 254, 0.6), 
+         rgba(205, 220, 57, 0.66)),
+        url(img/sidebar.jpg);
+        width: 150px;
+    }
+    .col-1, .col-2, .col-3 {
+        width: 14%;
+        flex-grow: 2;
+        padding: 120px 2% 0 2%;
+    }
+}
+
+@media only screen and (min-width: 81.25em) {
+    /*apie 1300px plotis ir daugiau*/
+
+    .container {
+        height: 100vh;
+    }
+    aside {
+        width: 300px;
+    }
+    .column {
+        margin: 0;
+        overflow: hidden;
+    }
+    .iteisinimas img {
+        float: right;
+    }
+    .pridavimas img {
+        float: right;
+    }
+}
+
+@media only screen and (min-width: 125em) {
+    /*apie 2000px plotis ir daugiau*/
+
+    h2 {
+        font-size: 1.5vw;
+    }
+    
+}
